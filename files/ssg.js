@@ -29,7 +29,7 @@ $.getScript("/ssg-config.js?v=" + new Date().getTime())
     )(jQuery);
 
 var MyInfo = "<span><a class='IFB' style='text-decoration:none' href='"+FB_MESSENGER_LINK+"'><i class='fa fa-facebook-official'></i> "+FB_NAME+"</a></span><span class='IEMAIL'><i class='fa fa-envelope'></i> "+EMAIL+"</span><span class='ICONTACT'><i class='fa fa-phone-square'></i> "+CONTACT_NUMBER+"</span><span class='ILOC'><i class='fa fa-map-marker'></i> "+MYLOCATION+"</span>";
-var amountValue = "₱ 00.00";
+var amountValue;
 
 function GetStatus() {
     waitForElm('.group-btn').then( () => {  
@@ -446,7 +446,7 @@ function AddBank(){
             
             contentDiv.append(`<img class='w-100' src='/${option.fileName}' />`);
             contentDiv.append(`<img class='img-btn' style="margin-top: 10px" src='/${option.bankName}' />`);
-            contentDiv.append(`<div><span class='amountLabel'>${AMOUNT_LABEL}</span><strong class='AmountVal'> ${amountValue}</strong></div>`);
+            contentDiv.append(`<div><span class='amountLabel'>${AMOUNT_LABEL}</span><strong class='AmountVal'> ₱ 00.00</strong></div>`);
             contentDiv.append(`<p>${SCREENSHOT_NOTE}</p>`);
             contentDiv.append(MyInfo);
             contentDiv.append(`<button type="button" style="margin-top: 10px;" class="btn btn-danger w-100" data-bs-dismiss="modal">Close</button>`);
@@ -511,4 +511,5 @@ function waitForElm(selector) {
 .fail(function(jqxhr, settings, exception) {
     alert("SSG-CONFIG NOT FOUND");
 });
+
 
