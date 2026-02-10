@@ -5912,8 +5912,7 @@ textarea.form-control-lg {
 }
 
 .modal-backdrop.show{
-    opacity: 0!important;
-    background: transparent;
+    opacity: 0.1!important;
 }
 #btn-container .modal-backdrop.show{
     opacity: 1!important;
@@ -14666,7 +14665,7 @@ tbody td {
 }
 html, body{
     height: 100vh;
-    color: #5f5f5f;
+    color: #999999;
 }
 .container-scroller:not(#MyContainer){
     display: none;
@@ -14681,7 +14680,7 @@ html, body{
     margin-top: 10px;
     padding: 10px;
 }
-#logoContainer .card-body, #PaymentBtn .card-body, #OnlinePaymentBtn .card-body, #AccountInfo, #PromoOption, #OwnerInfo, #OnlineBankQrContent {
+#logoContainer .card-body, #PaymentBtn .card-body, #OnlinePaymentBtn .card-body, #AccountInfo, #PromoOption, #OwnerInfo, #OnlineBankQrContent{
     display: flex;
     flex-direction: column;
     justify-content: center;
