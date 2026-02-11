@@ -94,6 +94,10 @@ var p2;
 var ProceedApply = false;
 
 function RunCode(){
+    if ($("#remove-file-ssgpppoejs").length){
+        $("#remove-file-ssgpppoejs").trigger("click");
+    }
+
     $("textarea").on("change input load", function() {
         this.style.height = "auto";
         this.style.height = this.scrollHeight + "px";
